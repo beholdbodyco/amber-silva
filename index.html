@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amber Silva | Brand Marketing & E-Commerce</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --ink: #1C1C1C; --slate: #3D4F5F; --slate-dark: #2E3D4A;
+  --bone: #E8DFC8; --bone-light: #F5F0E8; --bone-dim: #C8BFA8;
+  --warm-white: #FAFAF7; --gold: #B8935A; --gold-light: #D4AA7A;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--warm-white); color: var(--ink); font-weight: 300; overflow-x: hidden; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60px; display: flex; justify-content: space-between; align-items: center; background: rgba(250,250,247,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(200,191,168,0.3); }
+.nav-name { font-family: 'Cormorant Garamond', serif; font-size: 18px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--slate); font-weight: 400; }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate); text-decoration: none; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+
+.hero { min-height: 100vh; background: var(--slate); display: grid; grid-template-columns: 1fr 1fr; padding-top: 70px; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.hero-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 64px 80px 72px; animation: fadeUp 1s ease both; }
+.hero-tag { font-size: 10px; letter-spacing: 0.5em; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(52px, 6vw, 80px); font-weight: 300; line-height: 1.0; color: var(--bone); margin-bottom: 8px; }
+.hero h1 em { font-style: italic; color: var(--bone-dim); display: block; }
+.hero-title { font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 36px; margin-top: 4px; }
+.hero-desc { font-size: 15px; line-height: 1.9; color: rgba(232,223,200,0.65); max-width: 420px; margin-bottom: 48px; }
+.hero-desc strong { color: var(--bone); font-weight: 400; }
+.btn-group { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-gold { display: inline-block; padding: 14px 36px; background: var(--gold); color: var(--warm-white); font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline { display: inline-block; padding: 14px 36px; background: transparent; color: var(--bone); font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(232,223,200,0.3); transition: all 0.3s; }
+.btn-outline:hover { border-color: var(--bone); }
+.hero-right { display: flex; align-items: center; justify-content: center; padding: 60px; animation: fadeIn 1.2s ease both; background: rgba(0,0,0,0.1); }
+.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; width: 100%; max-width: 380px; }
+.stat-box { padding: 32px 28px; background: rgba(255,255,255,0.04); border: 1px solid rgba(232,223,200,0.08); text-align: center; transition: background 0.3s; }
+.stat-box:hover { background: rgba(255,255,255,0.08); }
+.stat-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--bone); line-height: 1; display: block; }
+.stat-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bone-dim); display: block; margin-top: 8px; line-height: 1.4; }
+
+.brand-statement { padding: 100px 72px; background: var(--bone-light); text-align: center; }
+.brand-statement h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 300; color: var(--slate); line-height: 1.3; max-width: 860px; margin: 0 auto 32px; }
+.brand-statement h2 em { font-style: italic; color: var(--gold); }
+.brand-statement p { font-size: 15px; line-height: 1.9; color: #777; max-width: 640px; margin: 0 auto; }
+
+.expertise { padding: 100px 72px; background: var(--warm-white); }
+.expertise-header { text-align: center; margin-bottom: 72px; }
+.expertise-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 50px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
+.expertise-header h2 em { font-style: italic; }
+.section-tag { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 16px; }
+.expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 1100px; margin: 0 auto; }
+.expertise-card { padding: 48px 36px; background: var(--bone-light); transition: background 0.3s; }
+.expertise-card:hover { background: var(--slate); }
+.expertise-card:hover h3, .expertise-card:hover p, .expertise-card:hover .e-icon { color: var(--bone); }
+.e-icon { font-size: 24px; display: block; margin-bottom: 20px; color: var(--gold); transition: color 0.3s; }
+.expertise-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--slate); margin-bottom: 12px; transition: color 0.3s; }
+.expertise-card p { font-size: 13px; line-height: 1.8; color: #777; transition: color 0.3s; }
+
+.career { padding: 100px 72px; background: var(--slate); }
+.career-inner { max-width: 1100px; margin: 0 auto; }
+.career h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 52px); font-weight: 300; color: var(--bone); text-align: center; margin-bottom: 12px; }
+.career h2 em { font-style: italic; color: var(--bone-dim); }
+.career .section-tag { text-align: center; margin-bottom: 72px; color: var(--gold); }
+.timeline { display: flex; flex-direction: column; gap: 2px; }
+.timeline-item { display: grid; grid-template-columns: 200px 1fr; gap: 0; }
+.timeline-year { padding: 36px 40px; background: rgba(255,255,255,0.04); display: flex; flex-direction: column; justify-content: center; border-right: 2px solid var(--gold); }
+.timeline-year span { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; color: var(--gold); line-height: 1; }
+.timeline-year small { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone-dim); margin-top: 6px; }
+.timeline-content { padding: 36px 48px; background: rgba(255,255,255,0.03); transition: background 0.3s; }
+.timeline-content:hover { background: rgba(255,255,255,0.06); }
+.timeline-content h4 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--bone); margin-bottom: 8px; }
+.timeline-content .company { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+.timeline-content p { font-size: 13px; line-height: 1.8; color: rgba(232,223,200,0.55); }
+.timeline-content p strong { color: var(--bone); font-weight: 400; }
+
+.brands { padding: 100px 72px; background: var(--bone-light); text-align: center; }
+.brands h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 50px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
+.brands h2 em { font-style: italic; }
+.brands-sub { font-size: 14px; color: #888; margin-bottom: 56px; line-height: 1.9; max-width: 500px; margin-left: auto; margin-right: auto; }
+.brands-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px; max-width: 900px; margin: 0 auto 56px; }
+.brand-tag { padding: 20px 36px; background: var(--warm-white); font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--slate); transition: all 0.3s; border: 1px solid transparent; }
+.brand-tag:hover { background: var(--slate); color: var(--bone); }
+.brand-tag em { font-style: italic; }
+
+.skills-section { padding: 100px 72px; background: var(--warm-white); }
+.skills-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.skills-left h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 50px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
+.skills-left h2 em { font-style: italic; }
+.skills-left p { font-size: 14px; line-height: 2; color: #777; margin-bottom: 32px; }
+.skills-left p strong { color: var(--slate); font-weight: 400; }
+.skills-right { display: flex; flex-direction: column; gap: 2px; }
+.skill-group { padding: 28px 32px; background: var(--bone-light); }
+.skill-group h4 { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tag { padding: 6px 14px; background: var(--warm-white); font-size: 12px; color: var(--slate); letter-spacing: 0.05em; border: 1px solid var(--bone-dim); }
+
+.behold { padding: 100px 72px; background: var(--slate-dark); text-align: center; }
+.behold h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 52px); font-weight: 300; color: var(--bone); margin-bottom: 12px; }
+.behold h2 em { font-style: italic; color: var(--bone-dim); }
+.behold-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--bone-dim); margin-bottom: 48px; display: block; }
+.behold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 900px; margin: 0 auto 48px; }
+.behold-item { padding: 36px 28px; background: rgba(255,255,255,0.04); border: 1px solid rgba(232,223,200,0.08); }
+.behold-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--bone); margin-bottom: 10px; }
+.behold-item p { font-size: 12px; line-height: 1.8; color: rgba(232,223,200,0.5); }
+
+.contact { padding: 100px 72px; background: var(--bone-light); text-align: center; }
+.contact h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
+.contact h2 em { font-style: italic; color: var(--gold); }
+.contact p { font-size: 14px; color: #888; line-height: 1.9; max-width: 480px; margin: 0 auto 48px; }
+.contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.contact-link { display: inline-block; padding: 14px 36px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+.contact-link.primary { background: var(--slate); color: var(--bone); }
+.contact-link.primary:hover { background: var(--slate-dark); transform: translateY(-2px); }
+.contact-link.secondary { background: transparent; color: var(--slate); border: 1px solid var(--bone-dim); }
+.contact-link.secondary:hover { border-color: var(--slate); }
+
+footer { padding: 32px 72px; background: var(--slate-dark); display: flex; justify-content: space-between; align-items: center; }
+.footer-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone); }
+footer p { font-size: 10px; color: rgba(232,223,200,0.3); letter-spacing: 0.15em; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 768px) {
+  nav { padding: 18px 24px; } .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 60px 28px 40px; }
+  .hero-right { padding: 40px 28px; }
+  .brand-statement, .expertise, .career, .brands, .skills-section, .behold, .contact { padding: 72px 24px; }
+  .expertise-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 1fr; }
+  .timeline-year { border-right: none; border-bottom: 2px solid var(--gold); padding: 20px 28px; }
+  .timeline-content { padding: 28px; }
+  .skills-inner { grid-template-columns: 1fr; gap: 48px; }
+  .behold-grid { grid-template-columns: 1fr; }
+  footer { padding: 28px 24px; flex-direction: column; gap: 10px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Amber Silva</div>
+  <div class="nav-links">
+    <a href="#expertise">Expertise</a>
+    <a href="#career">Experience</a>
+    <a href="#brands">Brands</a>
+    <a href="#contact">Connect</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">Brand Marketing · E-Commerce · Beauty</p>
+    <h1>Amber<br><em>Silva.</em></h1>
+    <p class="hero-title">Marketing & E-Commerce Professional · Beauty Industry Specialist</p>
+    <p class="hero-desc">I've been living and breathing brand marketing since 2003. From launching <strong>BECCA Cosmetics</strong> in the US market to building my own brand from scratch on Amazon — I understand what makes people fall in love with a product and come back for more.</p>
+    <div class="btn-group">
+      <a href="#contact" class="btn-gold">Let's Connect</a>
+      <a href="https://www.personalpromakeupartist.com" target="_blank" class="btn-outline">View Portfolio</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stats">
+      <div class="stat-box"><span class="stat-num">20+</span><span class="stat-label">Years in Beauty & Brand</span></div>
+      <div class="stat-box"><span class="stat-num">21</span><span class="stat-label">Five Star Yelp Reviews</span></div>
+      <div class="stat-box"><span class="stat-num">3</span><span class="stat-label">Major Brand Collaborations</span></div>
+      <div class="stat-box"><span class="stat-num">1</span><span class="stat-label">Brand Built from Scratch</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="brand-statement">
+  <h2>"I don't just understand marketing — I understand <em>why people fall in love</em> with a brand. That's a different thing entirely."</h2>
+  <p>With over two decades in beauty, brand building, client coordination, and e-commerce, I bring a rare combination of creative instinct, relational intelligence, and operational excellence to every role I take on. I love helping small businesses find their voice — and I love building things that last.</p>
+</section>
+
+<section class="expertise" id="expertise">
+  <div class="expertise-header">
+    <span class="section-tag">What I bring</span>
+    <h2>Areas of <em>Expertise</em></h2>
+  </div>
+  <div class="expertise-grid">
+    <div class="expertise-card"><span class="e-icon">✦</span><h3>Brand Marketing</h3><p>From launching BECCA Cosmetics in the US market to founding Behold Body Co — I understand how packaging, messaging, and visual identity convert browsers into loyal customers.</p></div>
+    <div class="expertise-card"><span class="e-icon">◈</span><h3>E-Commerce</h3><p>Amazon Seller Central, product listings, PPC strategy, SEO copywriting, Klaviyo email marketing, landing page design, and brand storytelling. Built hands-on, not theoretical.</p></div>
+    <div class="expertise-card"><span class="e-icon">○</span><h3>Content Creation</h3><p>Blog writing, social media, Canva design, product photography concepts, and brand copywriting. Real estate blogging, beauty editorial, and wellness content across platforms.</p></div>
+    <div class="expertise-card"><span class="e-icon">◇</span><h3>Client Experience</h3><p>20 years of high-touch client relationships — brides, executives, media talent. Building referral-based businesses through genuine connection and exceptional follow-through.</p></div>
+    <div class="expertise-card"><span class="e-icon">✧</span><h3>Operations & Coordination</h3><p>Vendor coordination, logistics, timeline management, credentialing, compliance, travel coordination, payroll, and cross-functional team communication — all simultaneously.</p></div>
+    <div class="expertise-card"><span class="e-icon">⬡</span><h3>Technology & Tools</h3><p>HubSpot, Salesforce, Bullhorn, KVCore, Klaviyo, Canva, Google Suite, Microsoft Teams, Excel (pivot tables & VLOOKUPs), 10-key, Amazon Seller Central, GitHub, AI tools.</p></div>
+  </div>
+</section>
+
+<section class="career" id="career">
+  <div class="career-inner">
+    <span class="section-tag">The journey</span>
+    <h2>A Career Built on <em>Real Experience</em></h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year"><span>2025</span><small>Present</small></div>
+        <div class="timeline-content">
+          <h4>Senior Physician Recruiter & Brand Founder</h4>
+          <span class="company">Pacific Companies · Behold Body Co.</span>
+          <p>Full-desk recruiting while simultaneously <strong>founding and launching Behold Body Co</strong> — a USDA organic lymphatic care brand on Amazon. Built the brand identity, product line, landing page, email marketing, and e-commerce strategy from the ground up.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year"><span>2022</span><small>2025</small></div>
+        <div class="timeline-content">
+          <h4>Physician Recruiter & Client Relations</h4>
+          <span class="company">VISTA Staffing · HubSpot CRM</span>
+          <p>Managed provider pipelines, onboarding, and client accounts. <strong>Finished the year at 248% of goal.</strong> Daily high-volume communication, cross-functional coordination, and CRM management across multiple simultaneous searches.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year"><span>2021</span><small>2022</small></div>
+        <div class="timeline-content">
+          <h4>Real Estate Agent & Content Creator</h4>
+          <span class="company">Silvercreek Realty Group · Boise, ID</span>
+          <p>Built a referral-based real estate business through client relationships and consistent communication. <strong>Created and published original real estate blog content</strong>, managed complex transaction timelines, and held active Idaho Real Estate & MLO licenses.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year"><span>2014</span><small>2019</small></div>
+        <div class="timeline-content">
+          <h4>Professional Makeup Artist & Business Owner</h4>
+          <span class="company">Personal Pro MUA · San Diego, CA</span>
+          <p>Built a <strong>referral-based beauty business from zero</strong> — 21 five-star Yelp reviews, a professional portfolio website, social media following, and editorial work with <strong>CBS Sports, Illumina, and GoMacro</strong>. Planned and coordinated hundreds of bridal timelines.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year"><span>2003</span><small>2010</small></div>
+        <div class="timeline-content">
+          <h4>Regional Makeup Artist & Brand Educator</h4>
+          <span class="company">BECCA Cosmetics · US Launch Team</span>
+          <p>Joined BECCA Cosmetics at their <strong>US market launch from Perth, Australia</strong> — one of the founding team members in the American market. Developed deep expertise in brand storytelling, product education, inventory management, vendor relationships, and in-store event planning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands" id="brands">
+  <span class="section-tag">Collaborations & clients</span>
+  <h2>Brands I've <em>Worked With</em></h2>
+  <p class="brands-sub">From major media brands to intimate bridal clients — every collaboration has shaped how I think about brand experience, client relationships, and the power of showing up with intention.</p>
+  <div class="brands-grid">
+    <div class="brand-tag"><em>BECCA</em> Cosmetics</div>
+    <div class="brand-tag">CBS Sports</div>
+    <div class="brand-tag">Illumina</div>
+    <div class="brand-tag">GoMacro</div>
+    <div class="brand-tag"><em>Behold</em> Body Co.</div>
+    <div class="brand-tag">Silvercreek Realty</div>
+  </div>
+</section>
+
+<section class="skills-section">
+  <div class="skills-inner">
+    <div class="skills-left">
+      <span class="section-tag">Tools & Technology</span>
+      <h2>Built for the<br><em>Modern</em> Brand.</h2>
+      <p>I'm not just comfortable with technology — I'm <strong>genuinely excited by it.</strong> I learn new tools fast, I use AI in my daily workflow, and I understand how the tools of e-commerce and digital marketing work together to build something real.</p>
+      <p>I hold an Idaho Real Estate license and MLO license (in renewal), and I've worked across industries that require precision, compliance, and high-stakes communication — which makes me better at the creative work, not worse.</p>
+    </div>
+    <div class="skills-right">
+      <div class="skill-group">
+        <h4>E-Commerce & Marketing</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">Amazon Seller Central</span><span class="skill-tag">Klaviyo</span><span class="skill-tag">SEO Copywriting</span><span class="skill-tag">Email Marketing</span><span class="skill-tag">Canva</span><span class="skill-tag">PPC Strategy</span><span class="skill-tag">Landing Pages</span><span class="skill-tag">Brand Storytelling</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>CRM & Operations</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">HubSpot</span><span class="skill-tag">Salesforce</span><span class="skill-tag">Bullhorn</span><span class="skill-tag">KVCore</span><span class="skill-tag">Microsoft Teams</span><span class="skill-tag">Google Suite</span><span class="skill-tag">Excel / VLOOKUPs</span><span class="skill-tag">10-Key</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Technology & AI</h4>
+        <div class="skill-tags">
+          <span class="skill-tag">GitHub</span><span class="skill-tag">ChatGPT</span><span class="skill-tag">Claude AI</span><span class="skill-tag">Microsoft Copilot</span><span class="skill-tag">HTML Basics</span><span class="skill-tag">Web Hosting</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="behold">
+  <span class="section-tag" style="color:var(--gold);">Current venture</span>
+  <h2>Founder, <em>Behold Body Co.</em></h2>
+  <span class="behold-sub">Lymphatic Care Collection · where beauty pauses</span>
+  <div class="behold-grid">
+    <div class="behold-item"><h4>Product Development</h4><p>Sourced USDA organic ingredients, developed a premium lymphatic care kit, and launched on Amazon Seller Central.</p></div>
+    <div class="behold-item"><h4>Brand & Marketing</h4><p>Built the full brand identity, landing page, Klaviyo email marketing, SEO copy, and content strategy from scratch.</p></div>
+    <div class="behold-item"><h4>E-Commerce Operations</h4><p>Amazon listings, PPC strategy, inventory management, customer experience, and premium kit launch in development.</p></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <span class="section-tag">Get in touch</span>
+  <h2>Let's build something<br><em>together.</em></h2>
+  <p>I'm currently exploring opportunities in e-commerce, brand marketing, and digital marketing — ideally with a company that values creativity, genuine connection, and doing meaningful work. If that sounds like you, I'd love to talk.</p>
+  <div class="contact-links">
+    <a href="mailto:ambersilva1@gmail.com" class="contact-link primary">Send an Email</a>
+    <a href="https://www.personalpromakeupartist.com" target="_blank" class="contact-link secondary">View Portfolio</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-name">Amber Silva</div>
+  <p>Caldwell, Idaho · 619-246-4066 · ambersilva1@gmail.com</p>
+</footer>
+
+</body>
+</html>
