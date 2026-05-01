@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amber Silva | Brand Marketing & E-Commerce</title>
+<title>Amber Silva | Healthcare Recruiter</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -21,6 +21,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60
 .nav-links a { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate); text-decoration: none; transition: color 0.3s; }
 .nav-links a:hover { color: var(--gold); }
 
+/* HERO */
 .hero { min-height: 100vh; background: var(--slate); display: grid; grid-template-columns: 1fr 1fr; padding-top: 70px; position: relative; overflow: hidden; }
 .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
 .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 80px 64px 80px 72px; animation: fadeUp 1s ease both; }
@@ -42,11 +43,13 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60
 .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--bone); line-height: 1; display: block; }
 .stat-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--bone-dim); display: block; margin-top: 8px; line-height: 1.4; }
 
+/* BRAND STATEMENT */
 .brand-statement { padding: 100px 72px; background: var(--bone-light); text-align: center; }
 .brand-statement h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 4vw, 52px); font-weight: 300; color: var(--slate); line-height: 1.3; max-width: 860px; margin: 0 auto 32px; }
 .brand-statement h2 em { font-style: italic; color: var(--gold); }
 .brand-statement p { font-size: 15px; line-height: 1.9; color: #777; max-width: 640px; margin: 0 auto; }
 
+/* EXPERTISE */
 .expertise { padding: 100px 72px; background: var(--warm-white); }
 .expertise-header { text-align: center; margin-bottom: 72px; }
 .expertise-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 50px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
@@ -60,6 +63,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60
 .expertise-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--slate); margin-bottom: 12px; transition: color 0.3s; }
 .expertise-card p { font-size: 13px; line-height: 1.8; color: #777; transition: color 0.3s; }
 
+/* CAREER */
 .career { padding: 100px 72px; background: var(--slate); }
 .career-inner { max-width: 1100px; margin: 0 auto; }
 .career h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 52px); font-weight: 300; color: var(--bone); text-align: center; margin-bottom: 12px; }
@@ -77,15 +81,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60
 .timeline-content p { font-size: 13px; line-height: 1.8; color: rgba(232,223,200,0.55); }
 .timeline-content p strong { color: var(--bone); font-weight: 400; }
 
-.brands { padding: 100px 72px; background: var(--bone-light); text-align: center; }
-.brands h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 50px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
-.brands h2 em { font-style: italic; }
-.brands-sub { font-size: 14px; color: #888; margin-bottom: 56px; line-height: 1.9; max-width: 500px; margin-left: auto; margin-right: auto; }
-.brands-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 2px; max-width: 900px; margin: 0 auto 56px; }
-.brand-tag { padding: 20px 36px; background: var(--warm-white); font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--slate); transition: all 0.3s; border: 1px solid transparent; }
-.brand-tag:hover { background: var(--slate); color: var(--bone); }
-.brand-tag em { font-style: italic; }
-
+/* SKILLS */
 .skills-section { padding: 100px 72px; background: var(--warm-white); }
 .skills-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 .skills-left h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 50px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
@@ -98,27 +94,32 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 60
 .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-tag { padding: 6px 14px; background: var(--warm-white); font-size: 12px; color: var(--slate); letter-spacing: 0.05em; border: 1px solid var(--bone-dim); }
 
-.behold { padding: 100px 72px; background: var(--slate-dark); text-align: center; }
-.behold h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 52px); font-weight: 300; color: var(--bone); margin-bottom: 12px; }
-.behold h2 em { font-style: italic; color: var(--bone-dim); }
-.behold-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: var(--bone-dim); margin-bottom: 48px; display: block; }
-.behold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; max-width: 900px; margin: 0 auto 48px; }
-.behold-item { padding: 36px 28px; background: rgba(255,255,255,0.04); border: 1px solid rgba(232,223,200,0.08); }
-.behold-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--bone); margin-bottom: 10px; }
-.behold-item p { font-size: 12px; line-height: 1.8; color: rgba(232,223,200,0.5); }
+/* WHAT I BRING */
+.values { padding: 100px 72px; background: var(--bone-light); text-align: center; }
+.values h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(34px, 4vw, 50px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
+.values h2 em { font-style: italic; color: var(--gold); }
+.values-sub { font-size: 14px; color: #888; margin-bottom: 64px; line-height: 1.9; max-width: 560px; margin-left: auto; margin-right: auto; }
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; max-width: 1100px; margin: 0 auto; }
+.value-box { padding: 40px 28px; background: var(--warm-white); border: 1px solid transparent; transition: all 0.3s; }
+.value-box:hover { background: var(--slate); border-color: var(--slate); }
+.value-box:hover .value-title, .value-box:hover .value-desc { color: var(--bone); }
+.value-num { font-family: 'Cormorant Garamond', serif; font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1; display: block; margin-bottom: 12px; }
+.value-title { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--slate); margin-bottom: 10px; display: block; transition: color 0.3s; }
+.value-desc { font-size: 12px; line-height: 1.8; color: #888; transition: color 0.3s; }
 
-.contact { padding: 100px 72px; background: var(--bone-light); text-align: center; }
-.contact h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 300; color: var(--slate); margin-bottom: 12px; }
+/* CONTACT */
+.contact { padding: 100px 72px; background: var(--slate-dark); text-align: center; }
+.contact h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 300; color: var(--bone); margin-bottom: 12px; }
 .contact h2 em { font-style: italic; color: var(--gold); }
-.contact p { font-size: 14px; color: #888; line-height: 1.9; max-width: 480px; margin: 0 auto 48px; }
+.contact p { font-size: 14px; color: rgba(232,223,200,0.55); line-height: 1.9; max-width: 480px; margin: 0 auto 48px; }
 .contact-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
 .contact-link { display: inline-block; padding: 14px 36px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
-.contact-link.primary { background: var(--slate); color: var(--bone); }
-.contact-link.primary:hover { background: var(--slate-dark); transform: translateY(-2px); }
-.contact-link.secondary { background: transparent; color: var(--slate); border: 1px solid var(--bone-dim); }
-.contact-link.secondary:hover { border-color: var(--slate); }
+.contact-link.primary { background: var(--gold); color: var(--warm-white); }
+.contact-link.primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+.contact-link.secondary { background: transparent; color: var(--bone); border: 1px solid rgba(232,223,200,0.3); }
+.contact-link.secondary:hover { border-color: var(--bone); }
 
-footer { padding: 32px 72px; background: var(--slate-dark); display: flex; justify-content: space-between; align-items: center; }
+footer { padding: 32px 72px; background: var(--slate-dark); border-top: 1px solid rgba(232,223,200,0.08); display: flex; justify-content: space-between; align-items: center; }
 .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone); }
 footer p { font-size: 10px; color: rgba(232,223,200,0.3); letter-spacing: 0.15em; }
 
@@ -130,13 +131,13 @@ footer p { font-size: 10px; color: rgba(232,223,200,0.3); letter-spacing: 0.15em
   .hero { grid-template-columns: 1fr; }
   .hero-left { padding: 60px 28px 40px; }
   .hero-right { padding: 40px 28px; }
-  .brand-statement, .expertise, .career, .brands, .skills-section, .behold, .contact { padding: 72px 24px; }
+  .brand-statement, .expertise, .career, .values, .skills-section, .contact { padding: 72px 24px; }
   .expertise-grid { grid-template-columns: 1fr; }
   .timeline-item { grid-template-columns: 1fr; }
   .timeline-year { border-right: none; border-bottom: 2px solid var(--gold); padding: 20px 28px; }
   .timeline-content { padding: 28px; }
   .skills-inner { grid-template-columns: 1fr; gap: 48px; }
-  .behold-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr 1fr; }
   footer { padding: 28px 24px; flex-direction: column; gap: 10px; text-align: center; }
 }
 </style>
@@ -148,168 +149,238 @@ footer p { font-size: 10px; color: rgba(232,223,200,0.3); letter-spacing: 0.15em
   <div class="nav-links">
     <a href="#expertise">Expertise</a>
     <a href="#career">Experience</a>
-    <a href="#brands">Brands</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Connect</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-tag">Brand Marketing · E-Commerce · Beauty</p>
+    <p class="hero-tag">Healthcare Recruiting · Provider Relations · Talent Acquisition</p>
     <h1>Amber<br><em>Silva.</em></h1>
-    <p class="hero-title">Marketing & E-Commerce Professional · Beauty Industry Specialist</p>
-    <p class="hero-desc">I've been living and breathing brand marketing since 2003. From launching <strong>BECCA Cosmetics</strong> in the US market to building my own brand from scratch on Amazon — I understand what makes people fall in love with a product and come back for more.</p>
+    <p class="hero-title">Full-Cycle Healthcare Recruiter · Physician & APP Specialist</p>
+    <p class="hero-desc">Three years of full-cycle physician and advanced practice provider recruiting — across every MD, DO, and APP specialty. I don't just fill roles. I build <strong>real relationships</strong> with providers, hiring managers, and teams, and I work with an intensity and commitment that produces results even in the most difficult environments.</p>
     <div class="btn-group">
       <a href="#contact" class="btn-gold">Let's Connect</a>
-      <a href="https://www.personalpromakeupartist.com" target="_blank" class="btn-outline">View Portfolio</a>
+      <a href="https://linkedin.com/in/amber-silva-1470a513" target="_blank" class="btn-outline">View LinkedIn</a>
     </div>
   </div>
   <div class="hero-right">
     <div class="hero-stats">
-      <div class="stat-box"><span class="stat-num">20+</span><span class="stat-label">Years in Beauty & Brand</span></div>
-      <a href="https://www.yelp.com/biz/amber-silva-makeup-artist-caldwell" target="_blank" class="stat-box" style="text-decoration:none; cursor:pointer;">
-        <span class="stat-num">21</span>
-        <span class="stat-label">Five Star Yelp Reviews ↗</span>
-      </a>
-      <div class="stat-box"><span class="stat-num">3</span><span class="stat-label">Major Brand Collaborations</span></div>
-      <div class="stat-box"><span class="stat-num">1</span><span class="stat-label">Brand Built from Scratch</span></div>
+      <div class="stat-box">
+        <span class="stat-num">248%</span>
+        <span class="stat-label">Of Annual Goal · VISTA Staffing</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">23</span>
+        <span class="stat-label">Days · First Contact to Placement</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">9</span>
+        <span class="stat-label">VMS Placements in First 10 Months</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num">3+</span>
+        <span class="stat-label">Years Full-Cycle PHY & APP Recruiting</span>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- STATEMENT -->
 <section class="brand-statement">
-  <h2>"I don't just understand marketing — I understand <em>why people fall in love</em> with a brand. That's a different thing entirely."</h2>
-  <p>With over two decades in beauty, brand building, client coordination, and e-commerce, I bring a rare combination of creative instinct, relational intelligence, and operational excellence to every role I take on. I love helping small businesses find their voice — and I love building things that last.</p>
+  <h2>"I'm not just a recruiter — I'm a <em>relationship builder</em> who happens to recruit."</h2>
+  <p>Hard work, persistence, and genuine care for the people I work with are not strategies for me — they're how I'm wired. I've produced results in some of the most difficult recruiting environments in healthcare staffing, and I'm ready to bring that drive somewhere it will truly be seen and rewarded.</p>
 </section>
 
+<!-- EXPERTISE -->
 <section class="expertise" id="expertise">
   <div class="expertise-header">
     <span class="section-tag">What I bring</span>
     <h2>Areas of <em>Expertise</em></h2>
   </div>
   <div class="expertise-grid">
-    <div class="expertise-card"><span class="e-icon">✦</span><h3>Brand Marketing</h3><p>From launching BECCA Cosmetics in the US market to founding Behold Body Co — I understand how packaging, messaging, and visual identity convert browsers into loyal customers.</p></div>
-    <div class="expertise-card"><span class="e-icon">◈</span><h3>E-Commerce</h3><p>Amazon Seller Central, product listings, PPC strategy, SEO copywriting, Klaviyo email marketing, landing page design, and brand storytelling. Built hands-on, not theoretical.</p></div>
-    <div class="expertise-card"><span class="e-icon">○</span><h3>Content Creation</h3><p>Blog writing, social media, Canva design, product photography concepts, and brand copywriting. Real estate blogging, beauty editorial, and wellness content across platforms.</p></div>
-    <div class="expertise-card"><span class="e-icon">◇</span><h3>Client Experience</h3><p>20 years of high-touch client relationships — brides, executives, media talent. Building referral-based businesses through genuine connection and exceptional follow-through.</p></div>
-    <div class="expertise-card"><span class="e-icon">✧</span><h3>Operations & Coordination</h3><p>Vendor coordination, logistics, timeline management, credentialing, compliance, travel coordination, payroll, and cross-functional team communication — all simultaneously.</p></div>
-    <div class="expertise-card"><span class="e-icon">⬡</span><h3>Technology & Tools</h3><p>HubSpot, Salesforce, Bullhorn, KVCore, Klaviyo, Canva, Google Suite, Microsoft Teams, Excel (pivot tables & VLOOKUPs), 10-key, Amazon Seller Central, GitHub, AI tools.</p></div>
+    <div class="expertise-card">
+      <span class="e-icon">✦</span>
+      <h3>Full-Cycle Recruiting</h3>
+      <p>From requisition intake to first day on site — I own every step. Sourcing, outreach, screening, negotiating rates and terms, coordinating credentialing, managing onboarding timelines, and ensuring a smooth start for every provider.</p>
+    </div>
+    <div class="expertise-card">
+      <span class="e-icon">◈</span>
+      <h3>Physician & APP Sourcing</h3>
+      <p>Cold calling, job boards, LinkedIn outreach, referral networks, and creative headhunting strategies across all MD, DO, and APP specialties. Proven success finding and engaging providers who aren't actively looking.</p>
+    </div>
+    <div class="expertise-card">
+      <span class="e-icon">○</span>
+      <h3>Relationship Management</h3>
+      <p>I am the single point of contact my providers trust. I build genuine, lasting relationships through consistent communication, follow-through, and authentic care for the people I work with — providers, hiring managers, and teammates alike.</p>
+    </div>
+    <div class="expertise-card">
+      <span class="e-icon">◇</span>
+      <h3>Rate Negotiation</h3>
+      <p>Skilled at negotiating provider compensation within client caps, market rates, and margin parameters. I understand how to get to yes without leaving value on the table — for the provider, the client, and the organization.</p>
+    </div>
+    <div class="expertise-card">
+      <span class="e-icon">✧</span>
+      <h3>Logistics & Coordination</h3>
+      <p>Provider scheduling, travel coordination, credentialing (internal and external), compliance documentation, and first-day preparation — I orchestrate all the moving pieces so every placement lands smoothly.</p>
+    </div>
+    <div class="expertise-card">
+      <span class="e-icon">⬡</span>
+      <h3>Data & Reporting</h3>
+      <p>ATS hygiene, pipeline reporting, KPI tracking, and metrics-driven performance management. I maintain clean, accurate records and use data to make better decisions and demonstrate results to leadership.</p>
+    </div>
   </div>
 </section>
 
+<!-- CAREER TIMELINE -->
 <section class="career" id="career">
   <div class="career-inner">
     <span class="section-tag">The journey</span>
-    <h2>A Career Built on <em>Real Experience</em></h2>
+    <h2>A Career Built on <em>Real Results</em></h2>
     <div class="timeline">
+
       <div class="timeline-item">
         <div class="timeline-year"><span>2025</span><small>Present</small></div>
         <div class="timeline-content">
-          <h4>Senior Physician Recruiter & Brand Founder</h4>
-          <span class="company">Pacific Companies · Behold Body Co.</span>
-          <p>Full-desk recruiting while simultaneously <strong>founding and launching Behold Body Co</strong> — a USDA organic lymphatic care brand on Amazon. Built the brand identity, product line, landing page, email marketing, and e-commerce strategy from the ground up.</p>
+          <h4>Senior Physician Recruiter — Full Desk</h4>
+          <span class="company">Pacific Companies · Remote</span>
+          <p>Full-cycle locum tenens recruiting across <strong>all MD, DO, and APP specialties</strong> in a high-volume VMS environment — one of the most competitive structures in healthcare staffing, where dozens of vendors compete for the same roles simultaneously. Success requires constant CV submissions, persistent outreach, precise timing, and deep provider relationships built without any direct facility access. Within the first 10 months: <strong>9 completed placements and 14–15 total confirmations</strong> — with several cancelled due to client-side need changes or providers securing other roles before start, both outside a recruiter's control. Negotiate rates within client caps, market data, and margin parameters. Serve as single point of contact for every provider from first outreach through credentialing, travel coordination, and first-day onboarding.</p>
         </div>
       </div>
+
       <div class="timeline-item">
         <div class="timeline-year"><span>2022</span><small>2025</small></div>
         <div class="timeline-content">
-          <h4>Physician Recruiter & Client Relations</h4>
-          <span class="company">VISTA Staffing · HubSpot CRM</span>
-          <p>Managed provider pipelines, onboarding, and client accounts. <strong>Finished the year at 248% of goal.</strong> Daily high-volume communication, cross-functional coordination, and CRM management across multiple simultaneous searches.</p>
+          <h4>Physician Recruiter — Primary Care</h4>
+          <span class="company">VISTA Staffing · Remote</span>
+          <p>Full-cycle Primary Care physician recruiting — sourcing, screening, negotiating, coordinating onboarding and credentialing across multiple simultaneous searches. Served as primary point of contact for providers and internal teams. Participated in full ATS implementation, transitioning from a 30-year legacy system to Bullhorn. <strong>Finished the year at 248% of annual goal</strong> despite a challenging market with significant team downsizing.</p>
         </div>
       </div>
+
       <div class="timeline-item">
         <div class="timeline-year"><span>2021</span><small>2022</small></div>
         <div class="timeline-content">
-          <h4>Real Estate Agent & Content Creator</h4>
+          <h4>Real Estate Agent</h4>
           <span class="company">Silvercreek Realty Group · Boise, ID</span>
-          <p>Built a referral-based real estate business through client relationships and consistent communication. <strong>Created and published original real estate blog content</strong>, managed complex transaction timelines, and held active Idaho Real Estate & MLO licenses.</p>
+          <p>After relocating to Idaho, obtained Real Estate and Mortgage licenses and built a referral-based real estate business. Managed complex transaction timelines across buyers, sellers, lenders, and title companies — <strong>coordinating multiple competing deadlines</strong> with precision and consistent client communication.</p>
         </div>
       </div>
+
+      <div class="timeline-item">
+        <div class="timeline-year"><span>2007</span><small>2009</small></div>
+        <div class="timeline-content">
+          <h4>Sales Consultant — Healthcare SaaS</h4>
+          <span class="company">HealthFusion · San Diego, CA</span>
+          <p>Conducted live remote EMR demonstrations to private practices, chiropractic offices, and medical groups via GoToMeeting — walking clinical staff through <strong>insurance verification, patient documentation, and full workflow transitions</strong> from legacy systems to cloud-based EMR. Consultative, relationship-driven sales with short decision cycles.</p>
+        </div>
+      </div>
+
       <div class="timeline-item">
         <div class="timeline-year"><span>2014</span><small>2019</small></div>
         <div class="timeline-content">
           <h4>Professional Makeup Artist & Business Owner</h4>
           <span class="company">Personal Pro MUA · San Diego, CA</span>
-          <p>Built a <strong>referral-based beauty business from zero</strong> — 21 five-star Yelp reviews, a professional portfolio website, social media following, and editorial work with <strong>CBS Sports, Illumina, and GoMacro</strong>. Planned and coordinated hundreds of bridal timelines.</p>
+          <p>Built a <strong>referral-based beauty business from the ground up</strong> — 21 five-star Yelp reviews, corporate and media work with CBS Sports, Illumina, and GoMacro. Managed all client relationships, contracts, vendor coordination, and event logistics. Relocated to Idaho in 2019 and transitioned into a new career path.</p>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-year"><span>2003</span><small>2010</small></div>
-        <div class="timeline-content">
-          <h4>Regional Makeup Artist & Brand Educator</h4>
-          <span class="company">BECCA Cosmetics · US Launch Team</span>
-          <p>Joined BECCA Cosmetics at their <strong>US market launch from Perth, Australia</strong> — one of the founding team members in the American market. Developed deep expertise in brand storytelling, product education, inventory management, vendor relationships, and in-store event planning.</p>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
 
-<section class="brands" id="brands">
-  <span class="section-tag">Collaborations & clients</span>
-  <h2>Brands I've <em>Worked With</em></h2>
-  <p class="brands-sub">From major media brands to intimate bridal clients — every collaboration has shaped how I think about brand experience, client relationships, and the power of showing up with intention.</p>
-  <div class="brands-grid">
-    <div class="brand-tag"><em>BECCA</em> Cosmetics</div>
-    <div class="brand-tag">CBS Sports</div>
-    <div class="brand-tag">Illumina</div>
-    <div class="brand-tag">GoMacro</div>
-    <div class="brand-tag"><em>Behold</em> Body Co.</div>
-    <div class="brand-tag">Silvercreek Realty</div>
-  </div>
-</section>
-
-<section class="skills-section">
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
   <div class="skills-inner">
     <div class="skills-left">
       <span class="section-tag">Tools & Technology</span>
-      <h2>Built for the<br><em>Modern</em> Brand.</h2>
-      <p>I'm not just comfortable with technology — I'm <strong>genuinely excited by it.</strong> I learn new tools fast, I use AI in my daily workflow, and I understand how the tools of e-commerce and digital marketing work together to build something real.</p>
-      <p>I hold an Idaho Real Estate license and MLO license (in renewal), and I've worked across industries that require precision, compliance, and high-stakes communication — which makes me better at the creative work, not worse.</p>
+      <h2>Built for the<br><em>Modern</em> Role.</h2>
+      <p>I pick up new technology quickly and genuinely enjoy it. I've worked in a 30-year legacy proprietary system and gone through a full ATS implementation to Bullhorn — so I'm not rattled by new tools or process changes. I adapt fast and keep performing through transitions.</p>
+      <p>I hold an <strong>Idaho Real Estate License</strong> and <strong>Mortgage License</strong>, both requiring precision, compliance, and high-stakes communication — qualities I bring to every recruiting role.</p>
     </div>
     <div class="skills-right">
       <div class="skill-group">
-        <h4>E-Commerce & Marketing</h4>
+        <h4>Recruiting & Sourcing</h4>
         <div class="skill-tags">
-          <span class="skill-tag">Amazon Seller Central</span><span class="skill-tag">Klaviyo</span><span class="skill-tag">SEO Copywriting</span><span class="skill-tag">Email Marketing</span><span class="skill-tag">Canva</span><span class="skill-tag">PPC Strategy</span><span class="skill-tag">Landing Pages</span><span class="skill-tag">Brand Storytelling</span>
+          <span class="skill-tag">Full-Cycle Recruiting</span>
+          <span class="skill-tag">Physician & APP Sourcing</span>
+          <span class="skill-tag">Cold Calling</span>
+          <span class="skill-tag">LinkedIn Outreach</span>
+          <span class="skill-tag">Job Boards</span>
+          <span class="skill-tag">Rate Negotiation</span>
+          <span class="skill-tag">Credentialing Coordination</span>
+          <span class="skill-tag">Provider Onboarding</span>
+          <span class="skill-tag">Travel Coordination</span>
+          <span class="skill-tag">Intake Facilitation</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4>CRM & Operations</h4>
+        <h4>ATS & CRM Systems</h4>
         <div class="skill-tags">
-          <span class="skill-tag">HubSpot</span><span class="skill-tag">Salesforce</span><span class="skill-tag">Bullhorn</span><span class="skill-tag">KVCore</span><span class="skill-tag">Microsoft Teams</span><span class="skill-tag">Google Suite</span><span class="skill-tag">Excel / VLOOKUPs</span><span class="skill-tag">10-Key</span>
+          <span class="skill-tag">Bullhorn ATS</span>
+          <span class="skill-tag">Salesforce</span>
+          <span class="skill-tag">HubSpot</span>
+          <span class="skill-tag">TextUs</span>
+          <span class="skill-tag">CloudCall</span>
+          <span class="skill-tag">Legacy ATS Systems</span>
+          <span class="skill-tag">ATS Implementation</span>
         </div>
       </div>
       <div class="skill-group">
-        <h4>Technology & AI</h4>
+        <h4>Technology & Productivity</h4>
         <div class="skill-tags">
-          <span class="skill-tag">GitHub</span><span class="skill-tag">ChatGPT</span><span class="skill-tag">Claude AI</span><span class="skill-tag">Microsoft Copilot</span><span class="skill-tag">HTML Basics</span><span class="skill-tag">Web Hosting</span>
+          <span class="skill-tag">Microsoft Office</span>
+          <span class="skill-tag">Excel</span>
+          <span class="skill-tag">Google Suite</span>
+          <span class="skill-tag">Microsoft Teams</span>
+          <span class="skill-tag">GoToMeeting</span>
+          <span class="skill-tag">AI Tools</span>
+          <span class="skill-tag">LinkedIn Recruiter</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="behold">
-  <span class="section-tag" style="color:var(--gold);">Current venture</span>
-  <h2>Founder, <em>Behold Body Co.</em></h2>
-  <span class="behold-sub">Lymphatic Care Collection · where beauty pauses</span>
-  <div class="behold-grid">
-    <div class="behold-item"><h4>Product Development</h4><p>Sourced USDA organic ingredients, developed a premium lymphatic care kit, and launched on Amazon Seller Central.</p></div>
-    <div class="behold-item"><h4>Brand & Marketing</h4><p>Built the full brand identity, landing page, Klaviyo email marketing, SEO copy, and content strategy from scratch.</p></div>
-    <div class="behold-item"><h4>E-Commerce Operations</h4><p>Amazon listings, PPC strategy, inventory management, customer experience, and premium kit launch in development.</p></div>
+<!-- VALUES / WHAT SETS ME APART -->
+<section class="values">
+  <span class="section-tag">What sets me apart</span>
+  <h2>Why Hard Work <em>Matters</em> to Me</h2>
+  <p class="values-sub">These aren't buzzwords — they're the qualities I've had to rely on every single day in some of the most demanding recruiting environments in healthcare staffing.</p>
+  <div class="values-grid">
+    <div class="value-box">
+      <span class="value-num">01</span>
+      <span class="value-title">Drive</span>
+      <p class="value-desc">Naturally motivated — I don't need external pressure to perform. I need an environment where that drive is recognized and rewarded.</p>
+    </div>
+    <div class="value-box">
+      <span class="value-num">02</span>
+      <span class="value-title">Relationships</span>
+      <p class="value-desc">I build genuine trust with providers, hiring managers, and teams. Every interaction is an opportunity to show up with integrity and care.</p>
+    </div>
+    <div class="value-box">
+      <span class="value-num">03</span>
+      <span class="value-title">Resilience</span>
+      <p class="value-desc">I have produced results in VMS environments, through layoffs, through market downturns. I figure it out and I keep going.</p>
+    </div>
+    <div class="value-box">
+      <span class="value-num">04</span>
+      <span class="value-title">Adaptability</span>
+      <p class="value-desc">New specialties, new systems, new industries — I acclimate fast, ask the right questions, and become effective quickly wherever I land.</p>
+    </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <span class="section-tag">Get in touch</span>
-  <h2>Let's build something<br><em>together.</em></h2>
-  <p>I'm currently exploring opportunities in e-commerce, brand marketing, and digital marketing — ideally with a company that values creativity, genuine connection, and doing meaningful work. If that sounds like you, I'd love to talk.</p>
+  <h2>Let's find the <em>right fit.</em></h2>
+  <p>I'm actively exploring recruiting and provider relations opportunities where relationship-building, hard work, and genuine commitment to people are valued and rewarded. If that sounds like your team, I'd love to connect.</p>
   <div class="contact-links">
     <a href="mailto:ambersilva1@gmail.com" class="contact-link primary">Send an Email</a>
-    <a href="https://www.personalpromakeupartist.com" target="_blank" class="contact-link secondary">View Portfolio</a>
-    <a href="https://www.yelp.com/biz/amber-silva-makeup-artist-caldwell" target="_blank" class="contact-link secondary">Read My Reviews</a>
+    <a href="https://linkedin.com/in/amber-silva-1470a513" target="_blank" class="contact-link secondary">LinkedIn Profile</a>
+    <a href="tel:6192466066" class="contact-link secondary">619-246-4066</a>
   </div>
 </section>
 
